@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { toast } from 'sonner';
 
 import Input from '@/components/input/CustomInput';
@@ -13,7 +13,6 @@ import { setLoading } from '@/store/slices/loading.slice';
  * Validates form inputs, displays errors, and shows loading/toast feedback.
  */
 const LoginPage: React.FC = () => {
-  const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
   const [formData, setFormData] = useState({ email: '', password: '' });
